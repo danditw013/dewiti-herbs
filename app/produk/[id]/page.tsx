@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 
+
 interface Props {
   params: {
     id: string;
