@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main className="min-h-screen bg-green-50 text-gray-800 p-6">
       {/* Tidak ada tombol keranjang */}
