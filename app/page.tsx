@@ -6,7 +6,7 @@ export default function Home() {
       {/* Tidak ada tombol keranjang */}
 
       <header className="text-center mb-10">
-        <h1 className="text-6xl font-bold text-green-700">Dewiti Herbs</h1>
+        <h1 className="text-4xl font-bold text-green-700">Dewiti Herbs</h1>
         <p className="text-lg mt-2">Segar Bugar Bersama Dewiti 🍃</p>
       </header>
 
@@ -36,7 +36,7 @@ export default function Home() {
 
 // Daftar produk (pastikan semua image valid)
 const products = [
-  {
+ {
     id: 1,
     name: "VITABUNDA",
     description: "Nutrisi untuk ibu & bayi. Meningkatkan imun dan kecerdasan.",

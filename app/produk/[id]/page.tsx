@@ -1,25 +1,14 @@
- 
-
 import Link from "next/link";
 
+export default async function ProdukDetail({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
 
-interface Props {
-  params: {
-    id: string;
-  };
-}
-
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  image: string;
-  whatsapp: string;
-  shopee: string;
-  tokopedia: string;
-}
-
-const products: Product[] = [  {
+  const products = [
+    {
     id: 1,
     name: "VITABUNDA",
     description: "Nutrisi untuk ibu & bayi. Meningkatkan imun dan kecerdasan.",
@@ -155,15 +144,14 @@ const products: Product[] = [  {
     tokopedia: "https://www.tokopedia.com/dewitiherbs",
    },];
 
-export default function ProductDetail({ params }: Props) {
-  const product = products.find((p) => p.id === Number(params.id));
+  const product = products.find((p) => p.id === Number(id));
 
   if (!product) {
     return <div className="p-6 text-red-600">Produk tidak ditemukan.</div>;
   }
 
   return (
-    <main className="p-6 text-gray-800">
+    <main className="p-6 text-white-800">
       <Link href="/" className="text-green-600 hover:underline mb-4 block">
         ← Kembali ke Beranda
       </Link>
@@ -205,5 +193,5 @@ export default function ProductDetail({ params }: Props) {
     </main>
   );
 }
-
-
+ 
+ 
